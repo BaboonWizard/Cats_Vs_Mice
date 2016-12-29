@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
     private float vertical = 0.0f;
     private AnimatorStateInfo stateInfo;
 
+    private int score = 0;
     //Hashes
     private int m_LocomotionId = 0;
 
@@ -65,6 +66,14 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            
+            Destroy(other.gameObject);
+        }
+    }
 
     public void StickToWorldSpace(Transform root, Transform camera, ref float directionOut, ref float speedOut)
     {
