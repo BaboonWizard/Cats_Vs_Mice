@@ -276,8 +276,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1507868617258082, guid: bf5a1cdc85489eb438a3919d5757bf18, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pick Up
       objectReference: {fileID: 0}
+    - target: {fileID: 33864166330118294, guid: bf5a1cdc85489eb438a3919d5757bf18,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf5a1cdc85489eb438a3919d5757bf18, type: 2}
   m_IsPrefabParent: 0
