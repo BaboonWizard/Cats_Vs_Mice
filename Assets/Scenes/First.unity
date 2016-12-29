@@ -619,12 +619,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e016297ca51afdb448b9c302099db8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 15
   rotSpeed: 9
-  jumpForce: 10
-  jumpForceMax: 100
-  jumpForceMin: 10
-  jumpBuildRate: 10
+  jumpForce: 100
+  jumpForceMax: 1000
+  jumpForceMin: 100
+  jumpBuildRate: 100
   jumpAngle: {x: 1, y: 1, z: 0}
 --- !u!114 &1662377208
 MonoBehaviour:

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 6f;// The speed that the player will move at.
-    public float rotSpeed = 2f;
-    public float jumpForce = 10f;
-	public float jumpForceMax = 100f;
-	public float jumpForceMin = 10f;
-	public float jumpBuildRate = 10f;
+    public float speed = 20f;// The speed that the player will move at.
+    public float rotSpeed = 40f;
+    public float jumpForce = 100f;
+	public float jumpForceMax = 1000f;
+	public float jumpForceMin = 100f;
+	public float jumpBuildRate = 100f;
 	public Vector3 jumpAngle = new Vector3(1,1,0);
-	
+	//public float jumpAngle = 45f;
 
 
 
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         // Store the input axes.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-
+		float jumpingAngle = Vector3.Angle( jumpAngle, transform.forward);
         // Move the player around the scene.
         Move(h, v);
         //Animating(h, v);
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		if (Input.GetButtonUp("Jump"))
 		{
-			playerRigidbody.velocity = jumpAngle * jumpForce;
+			playerRigidbody.AddForce((transform.forward + transform.up) * jumpForce);
 			jumpForce = jumpForceMin;
 		}
 			
